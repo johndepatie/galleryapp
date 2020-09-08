@@ -4,13 +4,13 @@ sidebar.sidebar
         img.navbar-brand(src='/images/PlaceholderLogo.png')
 
       ul.list-group.list-group-flush
-        li.list-group-item.list-group-item-action.bg-light.active Projects
+        li.list-group-item.list-group-item-action.bg-light: a.sidebar(class=(name === "projects" ? "active" : undefined))(href='/') Projects
         ul
-          li.nested-list-group.list-group-item.list-group-item-action.bg-light Link One
-          li.nested-list-group.list-group-item.list-group-item-action.bg-light Link Two
-          li.nested-list-group.list-group-item.list-group-item-action.bg-light Link Three
-        li.list-group-item.list-group-item-action.bg-light Contact
-        li.list-group-item.list-group-item-action.bg-light About
+          li.nested-list-group.list-group-item.list-group-item-action.bg-light: a.sidebar(href='#') Link One
+          li.nested-list-group.list-group-item.list-group-item-action.bg-light: a.sidebar(href='#') Link Two
+          li.nested-list-group.list-group-item.list-group-item-action.bg-light: a.sidebar(href='#') Link Three
+        li.list-group-item.list-group-item-action.bg-light: a.sidebar(href='#') Contact
+        li.list-group-item.list-group-item-action.bg-light: a.sidebar(class=(name === "about" ? "active" : undefined))(href='/about') About
         
       .navbar-brand-footer
         span.lead gallery.js
@@ -23,5 +23,3 @@ sidebar.sidebar
           a.list-group-item.list-group-item-action.bg-light(href="/test3.html") Link Three
         a.list-group-item.list-group-item-action.bg-light(href="/test4.html") Contact
         a.list-group-item.list-group-item-action.bg-light(href="/about") About -->
-        
-        
