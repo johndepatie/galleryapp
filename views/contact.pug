@@ -1,5 +1,47 @@
 extends layout
 
 block content
-    h1=title
-    p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam ullam eaque nostrum nobis esse id rerum accusamus quia. Esse consequuntur perferendis eveniet voluptatem neque animi repellendus dolorem iure placeat soluta.
+    .container-md
+        .row
+            .col-md-4.contactBlerb
+                .header
+                    h1=title
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam ullam eaque nostrum nobis esse id rerum accusamus quia. Esse consequuntur perferendis eveniet voluptatem neque animi repellendus dolorem iure placeat soluta.
+                ul.list-group.list-group-flush
+                    - var email="email@domain.com"
+                    - var ph="(555) 555-5555)"
+                    img(src="/images/emailIcon.png")
+                    li.list-group-item.email: a(href="mailto:"+email)=email
+                    img(src="/images/phoneIcon.png")
+                    li.list-group-item.phone=ph
+                    img(src="/images/locationIcon.png")
+                    li.list-group-item.address
+                        | Placeholder Studios <br />
+                        small 123 Street Road <br />
+                        small A1B 2C3 <br />
+                        small Calgary, AB
+
+            .col-md.contactForm
+                .form
+                    .form-row
+                        <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        </div>
+                        <div class="form-group col-md-6">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name">
+                        </div>
+                    .form-group
+                        <label for="inputState">Reason for contact</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>General Inquiry</option>
+                            <option>Business Inquiry</option>
+                            <option>Technical Support</option>
+                        </select>
+                    .form-group
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send <img src="/images/send.png"/></button>
