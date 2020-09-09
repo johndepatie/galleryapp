@@ -3,7 +3,11 @@ extends layout
 block content
     .container-md
         .row
-            .col-md-4.contactBlerb
+            .col-md-4.contactBlerb(
+                data-aos="fade-up"
+                data-aos-anchor-placement="bottom-botton"
+                data-aos-duration="1500"
+            )
                 .header
                     h1=title
                 p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam ullam eaque nostrum nobis esse id rerum accusamus quia. Esse consequuntur perferendis eveniet voluptatem neque animi repellendus dolorem iure placeat soluta.
@@ -21,7 +25,11 @@ block content
                         small A1B 2C3 <br />
                         small Calgary, AB
 
-            .col-md.contactForm
+            .col-md.contactForm(
+                data-aos="fade-up"
+                data-aos-anchor-placement="bottom-botton"
+                data-aos-duration="1500"
+            )
                 .form
                     .form-row
                         <div class="form-group col-md-6">
