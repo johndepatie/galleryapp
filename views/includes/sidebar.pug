@@ -9,17 +9,8 @@ sidebar.sidebar
           li.nested-list-group.list-group-item.list-group-item-action.bg-light: a.sidebar(href='#') Link One
           li.nested-list-group.list-group-item.list-group-item-action.bg-light: a.sidebar(href='#') Link Two
           li.nested-list-group.list-group-item.list-group-item-action.bg-light: a.sidebar(href='#') Link Three
-        li.list-group-item.list-group-item-action.bg-light: a.sidebar(href='#') Contact
+        li.list-group-item.list-group-item-action.bg-light: a.sidebar(class=(name === "contact" ? "active" : undefined))(href='/contact') Contact
         li.list-group-item.list-group-item-action.bg-light: a.sidebar(class=(name === "about" ? "active" : undefined))(href='/about') About
         
-      .navbar-brand-footer
+      .sidebar-brand-footer
         span.lead gallery.js
-<!--      .list-group.list-group-flush
-        a.list-group-item.list-group-item-action.bg-light(href="/") Dashboard
-        a.list-group-item.list-group-item-action.bg-light.active(href="/") Projects
-        ul
-          a.list-group-item.list-group-item-action.bg-light(href="/test.html") Link One
-          a.list-group-item.list-group-item-action.bg-light(href="/test2.html") Link Two
-          a.list-group-item.list-group-item-action.bg-light(href="/test3.html") Link Three
-        a.list-group-item.list-group-item-action.bg-light(href="/test4.html") Contact
-        a.list-group-item.list-group-item-action.bg-light(href="/about") About -->

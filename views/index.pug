@@ -3,11 +3,13 @@ extends layout
 block content
   .gallery#gallery
 
-    <!-- Grid column -->
     .mb-3
       - for (var n=0; n<35; n++)
-        - var str = 'https://picsum.photos/2000/2000?random='+n;
-        .img-wrapper
+        - var str = 'https://picsum.photos/1000/1000?random='+n;
+        .img-wrapper(
+          data-aos="fade-up"
+          aos-duration="1500"
+        )
           a: img(src=str)
 
         
