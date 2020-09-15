@@ -119,25 +119,10 @@ a.sidebar:hover:not(text-muted) {
   margin-right: -0.5em;
   margin-left: -0.5em;
 }
-.gallery .mb-3 a:hover img {
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  transform: scale(1.1);
-  opacity: 1;
-  transition: 0.3s;
-  z-index: 0;
-}
 .gallery a img {
   width: 100%;
   max-height: auto;
-  opacity: 0.5;
-  transition-timing-function: ease-out;
-  -webkit-transition: transform 0.5s ease;
-  -o-transition: transform 0.5s ease;
-  transition: transform 0.5s ease;
-  z-index: 1;
+  opacity: 1;
 }
 .gallery .img-wrapper {
   position: relative;
@@ -204,7 +189,24 @@ a.sidebar:hover:not(text-muted) {
     min-width: 0;
     width: 100%;
   }
-
+  .gallery .mb-3 a:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 1;
+    transition: 0.3s;
+    z-index: 0;
+  }
+  .gallery a img {
+    opacity: 0.5;
+    transition-timing-function: ease-out;
+    -webkit-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+    z-index: 1;
+  }
   #wrapper.toggled #sidebar-wrapper {
     margin-left: 0;
   }
