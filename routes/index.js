@@ -11,4 +11,12 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/tag=one', function(req, res, next) {
+  Image.find(function (err, imagegallery) {
+    if (err) console.log(err)
+
+    res.render('index', { title: 'Gallery', name: "one", imagegallery: imagegallery, tag: "one"});
+  });
+});
+
 module.exports = router;
