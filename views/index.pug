@@ -2,6 +2,16 @@ extends layout
 
 block content
   .gallery#gallery
+    .mb-3
+      each Image in imagegallery
+        .img-wrapper(
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-botton"
+          data-aos-duration="1500"
+        )
+          a: img(src= Image.imgsrc)
+      else
+        p No images available.
 
     .mb-3
       - for (var n=0; n<35; n++)
