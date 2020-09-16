@@ -9,6 +9,18 @@ var indexRouter = require('./routes/index');
 var aboutRouter = require('./routes/about');
 var contactRouter = require('./routes/contact');
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/imageGallery', {
+  useNewUrlParser: true
+});
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log('database connected');
+  // we're connected!
+});
+
 var app = express();
 
 // view engine setup
