@@ -2,16 +2,15 @@ sidebar.sidebar
     .bg-light#sidebar-wrapper
       .sidebar-heading
         img.navbar-brand(src='/images/favicon/android-chrome-192x192.png')
-
       ul.list-group.list-group-flush.sidebar-list
         li.list-group-item.list-group-item-action.bg-light: a.sidebar(class=(name === "projects" ? "active" : undefined))(href='/') Projects
         ul
           li.nested-list-group.list-group-item.list-group-item-action.bg-light: a.sidebar(class=(name === "projects" ? "active" : undefined))(href='/') All 
-            small.text-muted (36)
+            small.text-muted=count[0]
           li.nested-list-group.list-group-item.list-group-item-action.bg-light: a.sidebar(class=(name === "one" ? "active" : undefined))(href='/tag=one') Tag One 
-            small.text-muted (7)
-          //li.nested-list-group.list-group-item.list-group-item-action.bg-light: a.sidebar(href='#') Mountains 
-            small.text-muted (13)
+            small.text-muted=count[1]
+          li.nested-list-group.list-group-item.list-group-item-action.bg-light: a.sidebar(href='#') Two 
+            small.text-muted=count[2]
         li.list-group-item.list-group-item-action.bg-light: a.sidebar(class=(name === "contact" ? "active" : undefined))(href='/contact') Contact
         li.list-group-item.list-group-item-action.bg-light: a.sidebar(class=(name === "about" ? "active" : undefined))(href='/about') About
         
