@@ -131,6 +131,12 @@ a.sidebar:hover:not(text-muted) {
   align-items: center;
   max-height: 35rem;
 }
+.lightbox{
+  position: fixed !important;
+  top: 50% !important;
+  /* bring your own prefixes */
+  transform: translate(0, -50%);
+}
 .container-md {
   margin-top: 4rem;
 }

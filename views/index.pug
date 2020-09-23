@@ -9,18 +9,12 @@ block content
           data-aos-anchor-placement="bottom-botton"
           data-aos-duration="1500"
         )
-          a: img(src= Image.imgsrc)
+          a(
+            href=Image.imgsrc
+            data-lightbox="photos"
+          )
+            img.img-fluid(
+              src= Image.thumbnail
+            )
       else
         p No images available.
-
-    .mb-3
-      - for (var n=0; n<35; n++)
-        - var str = 'https://picsum.photos/1000/1000?random='+n;
-        .img-wrapper(
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-botton"
-          data-aos-duration="1500"
-        )
-          a: img(src=str)
-
-        
